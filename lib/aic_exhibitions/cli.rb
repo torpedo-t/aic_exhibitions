@@ -1,6 +1,8 @@
 class AicExhibitions::CLI 
   def call
     puts 'Welcome to The Art Institute of Chicago!'
+    get_current_exhibitions
+    get_user_input
   end
   
   # list_current_events
