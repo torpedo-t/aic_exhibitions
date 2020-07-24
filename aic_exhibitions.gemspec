@@ -1,16 +1,15 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "art_institute_exhibitions/version"
+require "aic_exhibitions/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "art_institute_exhibitions"
-  spec.version       = ArtInstituteExhibitions::VERSION
+  spec.name          = "aic_exhibitions"
+  spec.version       = AicExhibitions::VERSION
   spec.authors       = ["'Thomas John Helin'"]
   spec.email         = ["'thomashelin@yahoo.com'"]
 
   spec.summary       = %q{See current exhibitions and their details.}
-  spec.homepage      = "https://github.com/torpedo-t/art_institute_of_chicago_exhibitions"
+  spec.homepage      = "https://github.com/torpedo-t/aic_exhibitions.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,8 +18,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "http://mygemserver.com"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/torpedo-t/art_institute_of_chicago_exhibitions"
-    spec.metadata["changelog_uri"] = "https://github.com/torpedo-t/art_institute_of_chicago_exhibitions"
+    spec.metadata["source_code_uri"] = "https://github.com/torpedo-t/aic_exhibitions.git"
+    spec.metadata["changelog_uri"] = "https://github.com/torpedo-t/aic_exhibitions.git"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require_relative '../lib/aic_exhibitions_environment'
 
 AicExhibitions::CLI.new.call
