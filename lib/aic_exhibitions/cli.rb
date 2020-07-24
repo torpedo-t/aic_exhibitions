@@ -27,11 +27,12 @@ class AicExhibitions::CLI
   def get_user_exhibition
     chosen_exhibition = gets.strip 
     binding.pry
-    if valid_input(chosen_exhibition.to_i, @current_exhibitions)
+    #if valid_input(chosen_exhibition, @current_exhibitions)
+    #end
   end
   
   def valid_input(input, data)
-    input <= @current_exhibitions.length && input > 0
+    input.to_i <= @current_exhibitions.length && input > 0
   end
   
   
