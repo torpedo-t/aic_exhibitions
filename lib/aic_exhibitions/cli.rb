@@ -15,8 +15,8 @@ class AicExhibitions::CLI
   end
   
   def get_user_input
-    @current_exhibitions.each do |e|
-      puts "#{e}"
+    @current_exhibitions.each.with_index(1) do |e, index|
+      puts "#{index}. #{e}"
     end
   end
   
