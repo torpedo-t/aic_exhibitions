@@ -1,26 +1,38 @@
 class AicExhibitions::CLI 
   def call
-    puts 'Welcome to The Art Institute of Chicago!'
+    puts "\nWelcome to The Art Institute of Chicago!\n"
     get_current_exhibitions
-    get_user_input
+    list_current_exhibitions
+    #get_user_input
+    #print_selected_exhibitions_description
   end
   
-  # list_current_events
-  # get_user_input
-  # print_selected_exhibitions_description
+  # get_current_exhibitions
+  # list_current_exhibitions
+  # get_user_exhibition
+  # print_exhibition_description(input)
   
   def get_current_exhibitions
     # to be scaped instead, but for now we will create the data to get the program running
     @current_exhibitions = ['El Greco', 'Melangatana', 'Toulouse']
   end
   
-  def get_user_input
+  def list_current_exhibitions
+    puts "\nChoose an exhibition to see it's description\n"
     @current_exhibitions.each.with_index(1) do |e, index|
       puts "#{index}. #{e}"
     end
   end
   
-  def print_selected_exhibitions_description(input)
+  def get_user_exhibition
+    chosen_exhibition = gets.strip 
+    binding.pry
+    if @current_exhibitions.include
+    end
+  end
+  
+  
+  def print_exhibition_description(input)
     
   end
 end
