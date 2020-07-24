@@ -3,8 +3,8 @@ class AicExhibitions::CLI
     puts "\nWelcome to The Art Institute of Chicago!\n"
     get_current_exhibitions
     list_current_exhibitions
-    #get_user_input
-    #print_selected_exhibitions_description
+    #get_user_exhibition
+    #print_exhibition_description(input)
   end
   
   # get_current_exhibitions
@@ -30,6 +30,8 @@ class AicExhibitions::CLI
     if @current_exhibitions.include
     end
   end
+  
+  def valid_input(input, data)
   
   
   def print_exhibition_description(input)
