@@ -14,7 +14,7 @@ class AicExhibitions::CLI
   
   def get_current_exhibitions
     # to be scaped instead, but for now we will create the data to get the program running
-    @current_exhibitions = Exhibition.all
+    @current_exhibitions = AicExhibitions::Exhibition.all
   end
   
   def list_current_exhibitions

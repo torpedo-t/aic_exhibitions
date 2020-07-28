@@ -1,1 +1,3 @@
 class AicExhibitions::Exhibition
+  
+end
