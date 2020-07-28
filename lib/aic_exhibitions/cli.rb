@@ -26,9 +26,8 @@ class AicExhibitions::CLI
   
   def get_user_exhibition
     chosen_exhibition = gets.strip 
-    binding.pry
-    #if valid_input(chosen_exhibition, @current_exhibitions)
-    #end
+    show_exhibition_description(chosen_exhibition) if valid_input(chosen_exhibition, @current_exhibitions)
+    end
   end
   
   def valid_input(input, data)
@@ -36,7 +35,9 @@ class AicExhibitions::CLI
   end
   
   
-  def print_exhibition_description(input)
+  def show_exhibition_description(chosen_exhibition)
     
+    
+    binding.pry
   end
 end
