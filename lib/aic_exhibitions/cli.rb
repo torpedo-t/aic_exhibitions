@@ -1,3 +1,4 @@
+# create and test CLI class first with fake data. Once user interface is working how you intend, you can remove fake data and begin to fill out Scraper class
 class AicExhibitions::CLI 
   def call
     puts "\nWelcome to The Art Institute of Chicago!\n"
