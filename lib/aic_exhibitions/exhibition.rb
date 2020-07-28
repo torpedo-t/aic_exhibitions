@@ -1,6 +1,6 @@
 class AicExhibitions::Exhibition
   attr_accessor :name
-  attr_writer :desription
+  attr_writer :description
   
   @@all = []
   
@@ -16,8 +16,8 @@ class AicExhibitions::Exhibition
   end
   
   def description
-    AicExhibitions::Scraper.scrape_events if @description.empty?
-    @descriptions
+    AicExhibitions::Scraper.scrape_descriptions if @description.empty?
+    @description
   end
   
   def save
