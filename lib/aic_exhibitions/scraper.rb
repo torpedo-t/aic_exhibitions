@@ -10,5 +10,6 @@ class AicExhibitions::Scraper
   end
   
   def self.scrape_descriptions
-    site = ""
+    site = [""
+  end
 end

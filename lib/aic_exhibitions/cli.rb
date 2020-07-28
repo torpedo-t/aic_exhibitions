@@ -1,7 +1,7 @@
 # create and test CLI class first with fake data. Once user interface is working how you intend, you can remove fake data and begin to fill out Scraper class
 class AicExhibitions::CLI 
   def call
-    puts "\nWelcome to The Art Institute of Chicago!\n"
+    puts "\nWelcome to The Art Institute of Chicago!\n".colorize(:light_blue)
     get_current_exhibitions
     list_current_exhibitions
     get_user_exhibition
@@ -21,7 +21,7 @@ class AicExhibitions::CLI
   end
   
   def list_current_exhibitions
-    puts "\nChoose an exhibition to see it's description\n"
+    puts "\nChoose an exhibition to see it's description\n".colorize(:light_red)
     @current_exhibitions.each.with_index(1) do |e, index|
       puts "#{index}. #{e.name}"
     end
@@ -39,7 +39,7 @@ class AicExhibitions::CLI
   
   def show_exhibition_description(chosen_exhibition)
     exhibition = @current_exhibitions[chosen_exhibition -1] # we add the -1 because the index of an array always starts at 0 and not 1
-    puts "\nHere is the description for #{exhibition.name}\n"
+    puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end
