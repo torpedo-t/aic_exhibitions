@@ -4,7 +4,7 @@ class AicExhibitions::Exhibition
   
   @@all = []
   
-  def initialize(name)
+  def initialize(name) # set up each instance to initialize with a name argument. from there the .name will equal the objects @name attribute
     @name = name
     save
     @description = []

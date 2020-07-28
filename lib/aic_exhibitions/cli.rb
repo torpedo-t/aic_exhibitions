@@ -21,7 +21,7 @@ class AicExhibitions::CLI
   end
   
   def list_current_exhibitions
-    puts "\nChoose an exhibition to see it's description\n".colorize(:light_red)
+    puts "\nChoose an exhibition (by typing it's number) to see it's description\n".colorize(:light_red)
     @current_exhibitions.each.with_index(1) do |e, index|
       puts "#{index}. #{e.name}"
     end
