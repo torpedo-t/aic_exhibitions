@@ -21,7 +21,7 @@ class AicExhibitions::CLI
   def list_current_exhibitions
     puts "\nChoose an exhibition to see it's description\n"
     @current_exhibitions.each.with_index(1) do |e, index|
-      puts "#{index}. #{e}"
+      puts "#{index}. #{e.name}"
     end
   end
   
@@ -37,7 +37,7 @@ class AicExhibitions::CLI
   
   def show_exhibition_description(chosen_exhibition)
     exhibition = @current_exhibitions[chosen_exhibition -1] # we add the -1 because the index of an array always starts at 0 and not 1
-    puts "\nHere is the description for #{exhibition}\n"
+    puts "\nHere is the description for #{exhibition.name}\n"
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end

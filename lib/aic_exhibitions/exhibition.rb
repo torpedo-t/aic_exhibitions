@@ -1,9 +1,10 @@
 class AicExhibitions::Exhibition
-  attr_accessor :description
+  attr_accessor :name, :description
   
-  @@all = ["a", "b", "c"]
+  @@all = []
   
-  def initialize(description)
+  def initialize(name)
+    @name = name
     @description = description
     save
   end
