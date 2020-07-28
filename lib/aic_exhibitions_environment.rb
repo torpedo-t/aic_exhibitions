@@ -7,6 +7,7 @@ require_relative "./aic_exhibitions/scraper"
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
 
 module AicExhibitions
   class Error < StandardError; end

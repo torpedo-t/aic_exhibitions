@@ -8,4 +8,7 @@ class AicExhibitions::Scraper
        AicExhibitions::Exhibition.new(name)
     end
   end
+  
+  def self.scrape_descriptions
+    site = ""
 end
