@@ -2,6 +2,7 @@
 require_relative "./aic_exhibitions/version"
 require_relative "./aic_exhibitions/cli"
 require_relative "./aic_exhibitions/exhibition"
+require_relative "./aic_exhibitions/scraper"
 require 'pry'
 
 module AicExhibitions
