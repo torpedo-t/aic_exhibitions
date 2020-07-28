@@ -4,6 +4,8 @@ require_relative "./aic_exhibitions/cli"
 require_relative "./aic_exhibitions/exhibition"
 require_relative "./aic_exhibitions/scraper"
 require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
 module AicExhibitions
   class Error < StandardError; end

@@ -1,1 +1,3 @@
 class AicExhibitions::Scraper
+  
+end
