@@ -40,7 +40,7 @@ class AicExhibitions::CLI
   def show_exhibition_description(chosen_exhibition)
     exhibition = @current_exhibitions[chosen_exhibition -1] # we add the -1 because the index of an array always starts at 0 and not 1
     puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
-    description = AicExhibitions::Exhibition.description
+    description = exhibition.description
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end

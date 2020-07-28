@@ -7,7 +7,7 @@ class AicExhibitions::Exhibition
   def initialize(name)
     @name = name
     save
-    @descriptions = []
+    @description = []
   end
   
   def self.all 
@@ -15,8 +15,8 @@ class AicExhibitions::Exhibition
     @@all
   end
   
-  def descriptions
-    AicExhibitions::Scraper.scrape_events if @descriptions.empty?
+  def description
+    AicExhibitions::Scraper.scrape_events if @description.empty?
     @descriptions
   end
   
