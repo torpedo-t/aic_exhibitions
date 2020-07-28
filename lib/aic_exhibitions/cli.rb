@@ -39,6 +39,6 @@ class AicExhibitions::CLI
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end
-    # binding.pry
+     binding.pry
   end
 end
