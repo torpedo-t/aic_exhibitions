@@ -10,10 +10,11 @@ class AicExhibitions::CLI
   # list_current_exhibitions | # lists all current exhibitions to the user
   # show_user_exhibition | # takes input from user and checks to see if it's valid, if valid show user exhibition description
   # show_exhibition_description(chosen_exhibition)
+  # allow user to select 2nd exhibition
   
   def get_current_exhibitions
     # to be scaped instead, but for now we will create the data to get the program running
-    @current_exhibitions = ['El Greco', 'Melangatana', 'Toulouse']
+    @current_exhibitions = Exhibition.all
   end
   
   def list_current_exhibitions
@@ -35,7 +36,7 @@ class AicExhibitions::CLI
   
   def show_exhibition_description(chosen_exhibition)
     exhibition = @current_exhibitions[chosen_exhibition -1] # we add the -1 because the index of an array always starts at 0 and not 1
-    puts "Here is the description for #{exhibition}"
+    puts "\nHere is the description for #{exhibition}\n"
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end
