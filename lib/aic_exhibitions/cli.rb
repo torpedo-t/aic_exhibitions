@@ -15,6 +15,7 @@ class AicExhibitions::CLI
   def get_current_exhibitions
     # to be scaped instead, but for now we will create the data to get the program running
     @current_exhibitions = AicExhibitions::Exhibition.all
+    #binding.pry
   end
   
   def list_current_exhibitions
@@ -40,6 +41,6 @@ class AicExhibitions::CLI
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end
-     binding.pry
+     #binding.pry
   end
 end
