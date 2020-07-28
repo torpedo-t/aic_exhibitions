@@ -4,7 +4,6 @@ class AicExhibitions::CLI
     get_current_exhibitions
     list_current_exhibitions
     get_user_exhibition
-    
   end
   
   # get_current_exhibitions | # scrapes all current exhibitions from website
@@ -40,6 +39,6 @@ class AicExhibitions::CLI
     # AicExhibitions::Exhibition.all.each.with_index(1) do |exhibition|
     # puts exhibition.description
     # end
-    binding.pry
+    # binding.pry
   end
 end
