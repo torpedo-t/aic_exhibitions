@@ -32,7 +32,7 @@ class AicExhibitions::CLI
   end
   
   def valid_input(input, data)
-    input.to_i <= @current_exhibitions.length && input > 0
+    input.to_i <= data.length && input.to_i > 0
   end
   
   
