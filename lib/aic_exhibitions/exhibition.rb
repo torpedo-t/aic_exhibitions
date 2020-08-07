@@ -3,7 +3,7 @@ class AicExhibitions::Exhibition
   
   @@all = []
   
-  def initialize(name) # set up each instance to initialize with a name argument. from there the .name will equal the objects @name attribute
+  def initialize(name, link) # set up each instance to initialize with a name, and link argument. from there the .name will equal the objects @name attribute and the .link will equal the objects @link attribute
     @name = name
     @link = link
     save
