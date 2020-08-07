@@ -4,19 +4,18 @@ class AicExhibitions::Scraper
     page = Nokogiri::HTML(open(site))
     exhibitions = page.css("ul.o-grid-listing a")
     exhibitions.each do |e|
-       name = e.css("strong.title").text.strip
-       #link = e.css["href"]
-       AicExhibitions::Exhibition.new(name)
-    end
+       @name = e.css("strong.title").text.strip
+     end
+       @link = exhibitions[0]["href"]
+       AicExhibitions::Exhibition.new(@name, @link)
+       #binding.pry
   end
   
-#  page = Nokogiri::HTML(open(site))
-# results = page.css("ul.o-grid-listing a")
-# results.each do |r|
-#  puts results[0+1]["href"]
+# exhibitions = page.css("ul.o-grid-listing a")
+# puts exhibitions[1]["href"]
   
-  def self.scrape_descriptions(link)
-    site = link
+  def self.scrape_descriptions(url)
+    site = url
     page = Nokogiri::HTML(open(site))
     descriptions = page.css("ul.o-grid-listing a")
     descriptions.each do |d|
