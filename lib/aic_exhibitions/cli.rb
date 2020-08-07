@@ -5,6 +5,7 @@ class AicExhibitions::CLI
     get_current_exhibitions
     list_current_exhibitions
     get_user_exhibition
+    #show_exhibition_description(chosen_exhibition)
   end
   
   def get_current_exhibitions
