@@ -1,5 +1,6 @@
 class AicExhibitions::Exhibition
-  attr_accessor :name, :link
+  attr_accessor :name
+  attr_writer :link
   
   @@all = []
   
@@ -14,10 +15,10 @@ class AicExhibitions::Exhibition
     @@all
   end
   
-  # def description
-  # AicExhibitions::Scraper.scrape_descriptions if @description.empty?
-  #  @description
-  # end
+  def link
+  AicExhibitions::Scraper.scrape_descriptions if @link.empty?
+  @link
+  end
   
   def save
     @@all << self
