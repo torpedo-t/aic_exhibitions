@@ -1,13 +1,12 @@
 class AicExhibitions::Exhibition
-  attr_accessor :name
-  attr_writer :description
+  attr_accessor :name, :link
   
   @@all = []
   
   def initialize(name) # set up each instance to initialize with a name argument. from there the .name will equal the objects @name attribute
     @name = name
+    @link = link
     save
-    @description = []
   end
   
   def self.all 
@@ -15,10 +14,10 @@ class AicExhibitions::Exhibition
     @@all
   end
   
-  def description
-    AicExhibitions::Scraper.scrape_descriptions if @description.empty?
-    @description
-  end
+  # def description
+  # AicExhibitions::Scraper.scrape_descriptions if @description.empty?
+  #  @description
+  # end
   
   def save
     @@all << self
