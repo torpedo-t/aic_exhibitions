@@ -11,9 +11,6 @@ class AicExhibitions::Scraper
      end
   end
   
-# exhibitions = page.css("ul.o-grid-listing a")
-# puts exhibitions[1]["href"]
-  
   def self.scrape_descriptions(input)
     input = @link # this line right here is what is preventing me from displaying every description... it's currently displaying same one for every input
     site = input
