@@ -14,13 +14,10 @@ class AicExhibitions::Scraper
 # exhibitions = page.css("ul.o-grid-listing a")
 # puts exhibitions[1]["href"]
   
-  def self.scrape_descriptions(chosen_exhibition)
-    site = @chosen_exhibition.link
+  def self.scrape_descriptions(site)
+    site = # chosen_exhibition.link
     page = Nokogiri::HTML(open(site))
-    descriptions = page.css("ul.o-grid-listing a")
-    descriptions.each do |d|
-      description = d.css("p").text
-      puts description
-    end
+    descriptions = page.css("div.f-deck p").text.strip
+      puts descriptions
   end
 end
