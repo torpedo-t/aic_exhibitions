@@ -5,7 +5,6 @@ class AicExhibitions::CLI
     get_current_exhibitions
     list_current_exhibitions
     get_user_exhibition
-    show_exhibition_description(@chosen_exhibition)
   end
   
   def get_current_exhibitions
@@ -30,14 +29,14 @@ class AicExhibitions::CLI
     input.to_i <= data.length && input.to_i > 0
   end
   
-  #def get_user_description(input)
-    #description = @current_exhibitions[input -1]
-  #end
+  # def get_user_description
+    
+  # end
   
   
   def show_exhibition_description(input)
     exhibition = @current_exhibitions[input -1] # we add the -1 because the index of an array always starts at 0 and not 1
     puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
-    # call on something to print out scraped description 
+    AicExhibitions::Scraper.scrape_descriptions(@chosen_exhibition)
   end
 end

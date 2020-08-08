@@ -14,8 +14,9 @@ class AicExhibitions::Scraper
 # exhibitions = page.css("ul.o-grid-listing a")
 # puts exhibitions[1]["href"]
   
-  def self.scrape_descriptions(site)
-    site = # chosen_exhibition.link
+  def self.scrape_descriptions(input)
+    input = @link
+    site = input
     page = Nokogiri::HTML(open(site))
     descriptions = page.css("div.f-deck p").text.strip
       puts descriptions
