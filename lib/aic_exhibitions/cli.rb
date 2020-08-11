@@ -40,6 +40,16 @@ class AicExhibitions::CLI
   end
   
   def get_user_input
-    puts "Would you like to view the list again (y) or leave the program (n)"
+    puts "\nView the list again by typing (y) or leave the program by typing (n)\n".colorize(:light_green)
+    input = gets.strip
+    if input == "y"
+    get_current_exhibitions && list_current_exhibitions && get_user_exhibition
+    elsif input == "n"
+    leave_program
+    end
+  end
+  
+  def leave_program
+    puts "\nGoodbye!\n".colorize(:light_blue)
   end
 end
