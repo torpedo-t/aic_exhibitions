@@ -5,6 +5,7 @@ class AicExhibitions::CLI
     get_current_exhibitions
     list_current_exhibitions
     get_user_exhibition
+    get_user_input
   end
   
   def get_current_exhibitions
@@ -14,10 +15,11 @@ class AicExhibitions::CLI
   end
   
   def list_current_exhibitions
-    puts "\nChoose an exhibition (by typing it's number) to see it's description\n".colorize(:light_red)
+    puts "Choose an exhibition by typing its number(1, 2, etc.) to see it's description".colorize(:light_red)
     @current_exhibitions.each.with_index(1) do |e, index|
       puts "#{index}. #{e.name}"
     end
+    puts "Scroll up to see the Instructions at the top of the list!".colorize(:light_red)
   end
   
   def get_user_exhibition
@@ -35,5 +37,9 @@ class AicExhibitions::CLI
     exhibition = @chosen_exhibition # we add the -1 because the index of an array always starts at 0 and not 1
     puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
     AicExhibitions::Scraper.scrape_descriptions(exhibition)
+  end
+  
+  def get_user_input
+    puts "Would you like to view the list again (y) or leave the program (n)"
   end
 end
