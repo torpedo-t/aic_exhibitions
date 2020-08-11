@@ -21,7 +21,8 @@ class AicExhibitions::CLI
   end
   
   def get_user_exhibition
-    @chosen_exhibition = gets.strip.to_i
+    input = gets.strip
+    @chosen_exhibition = Exhibition[input.to_i - 1]
     show_exhibition_description(@chosen_exhibition) if valid_input(@chosen_exhibition, @current_exhibitions)
   end
   
@@ -30,7 +31,7 @@ class AicExhibitions::CLI
   end
   
   def show_exhibition_description(input)
-    exhibition = @current_exhibitions[input -1] # we add the -1 because the index of an array always starts at 0 and not 1
+    exhibition = @chosen_exhibition # we add the -1 because the index of an array always starts at 0 and not 1
     puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
     AicExhibitions::Scraper.scrape_descriptions(exhibition)
   end

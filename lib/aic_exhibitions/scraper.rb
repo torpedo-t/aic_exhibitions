@@ -11,11 +11,9 @@ class AicExhibitions::Scraper
      end
   end
   
-  def self.scrape_descriptions(input)
-    input = @link # this line right here is what is preventing me from displaying every description... it's currently displaying same one for every input
-    site = input
-    page = Nokogiri::HTML(open(site))
+   def self.scrape_descriptions(exhibition)
+    page = Nokogiri::HTML(open(exhibition.link))
     descriptions = page.css("div.f-deck p").text.strip
-      puts descriptions
+    puts descriptions
   end
 end
