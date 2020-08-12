@@ -48,10 +48,9 @@ class AicExhibitions::CLI
     get_current_exhibitions
     list_current_exhibitions
     get_user_exhibition
-    if input == "n" 
+    elsif input == "n" 
     leave_program
     end
-  end
   end
   
   def leave_program
