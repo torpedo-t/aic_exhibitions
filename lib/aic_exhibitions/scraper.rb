@@ -14,7 +14,7 @@ class AicExhibitions::Scraper
   
    def self.scrape_descriptions(exhibition)
     page = Nokogiri::HTML(open(exhibition.link))
-    descriptions = page.css("div.f-deck p").text.strip
+    descriptions = page.css("div.o-article__body p").text.strip
     puts descriptions
   end
 end
