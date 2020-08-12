@@ -5,7 +5,7 @@ class AicExhibitions::Scraper
     exhibitions = page.css("ul.o-grid-listing a")
     exhibitions.each do |e|
        @name = e.css("strong.title").text.strip
-       @link = exhibitions[0-16]["href"]
+       @link = exhibitions[3]["href"]
        AicExhibitions::Exhibition.new(@name, @link)
        #binding.pry
      end
