@@ -23,15 +23,16 @@ class AicExhibitions::CLI
   end
   
   def get_user_exhibition
-    @input = gets.strip
-    @chosen_exhibition = @current_exhibitions[@input.to_i - 1]
+    input = gets.strip
+    @chosen_exhibition = @current_exhibitions[input.to_i - 1]
+    #binding.pry
     show_exhibition_description(@chosen_exhibition) if valid_input(@chosen_exhibition, @current_exhibitions)
     get_user_input
   end
   
   def valid_input(input, data) # checks to see if input is valid, simply returns false or true and doesn't effect the input by changing it to an integer
-    input = @input
-    #binding.pry
+    input  # INPUT MUST BE SET EQUAL TO THE INDEX OF THE EXHIBITION OBJECT.
+    binding.pry
     input.to_i <= data.length && input.to_i > 0
   end
   
@@ -39,7 +40,7 @@ class AicExhibitions::CLI
     exhibition = @chosen_exhibition # we add the -1 because the index of an array always starts at 0 and not 1
     puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
     AicExhibitions::Scraper.scrape_descriptions(exhibition)
-    binding.pry
+    #binding.pry
   end
   
   def get_user_input
