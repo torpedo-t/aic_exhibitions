@@ -26,6 +26,7 @@ class AicExhibitions::CLI
     @input = gets.strip
     @chosen_exhibition = @current_exhibitions[@input.to_i - 1]
     show_exhibition_description(@chosen_exhibition) if valid_input(@chosen_exhibition, @current_exhibitions)
+    #get_user_input
   end
   
   def valid_input(input, data) # checks to see if input is valid, simply returns false or true and doesn't effect the input by changing it to an integer
