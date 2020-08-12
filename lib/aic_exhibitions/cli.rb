@@ -31,10 +31,12 @@ class AicExhibitions::CLI
   end
   
   def valid_input(input, data) # checks to see if input is valid, simply returns false or true and doesn't effect the input by changing it to an integer
-    input  # INPUT MUST BE SET EQUAL TO THE INDEX OF THE EXHIBITION OBJECT.
-    binding.pry
+    e = input.find_index # INPUT MUST BE SET EQUAL TO THE INDEX OF THE EXHIBITION OBJECT.
+    e.index(input)
+    #binding.pry
     input.to_i <= data.length && input.to_i > 0
   end
+  # a.index(obj)Find index of first obj in a where object in a == obj (option 1)
   
   def show_exhibition_description(input)
     exhibition = @chosen_exhibition # we add the -1 because the index of an array always starts at 0 and not 1
