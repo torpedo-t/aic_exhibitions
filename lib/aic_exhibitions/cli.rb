@@ -45,10 +45,13 @@ class AicExhibitions::CLI
     puts "\nView the list again by typing (y) or leave the program by typing (n)\n".colorize(:light_green)
     input = gets.strip
     if input == "y"
-    get_current_exhibitions && list_current_exhibitions && get_user_exhibition
-    elsif input == "n"
+    get_current_exhibitions
+    list_current_exhibitions
+    get_user_exhibition
+    until input == "n" do
     leave_program
     end
+  end
   end
   
   def leave_program
