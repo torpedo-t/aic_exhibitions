@@ -14,11 +14,11 @@ class AicExhibitions::CLI
   end
   
   def list_current_exhibitions
-    puts "Choose an exhibition by typing its number(1, 2, etc.) to see it's description".colorize(:light_red)
+    puts "\nChoose an exhibition by typing its number(1, 2, etc.) to see it's description!\n".colorize(:light_red)
     @current_exhibitions.each.with_index(1) do |e, index|
       puts "#{index}. #{e.name}"
     end
-    puts "Scroll up to see the Instructions at the top of the list!".colorize(:light_red)
+    puts "\nScroll up to see the Instructions at the top of the list!\n".colorize(:light_red)
   end
   
   def get_user_exhibition
@@ -35,13 +35,13 @@ class AicExhibitions::CLI
   
   def show_exhibition_description(input)
      exhibition = @chosen_exhibition # we add the -1 because the index of an array always starts at 0 and not 1
-    puts "\nHere is the description for #{exhibition.name}\n".colorize(:light_green)
+    puts "\nHere is the description for #{exhibition.name}.\n".colorize(:light_green)
     AicExhibitions::Scraper.scrape_descriptions(exhibition)
-    #binding.pry
+    puts "\nScroll up to see the Instructions at the top of the list.\n".colorize(:light_red)
   end
   
   def get_user_input
-    puts "\nView the list again by typing (y) or leave the program by typing (n)\n".colorize(:light_green)
+    puts "\nView the list again by typing (y) or leave the program by typing (n).\n".colorize(:light_green)
     input = gets.strip
     if input == "y"
     get_current_exhibitions
