@@ -1,10 +1,12 @@
 # AicExhibitions
 
-Find out what exhibitions are on at AIC!
+Find out what exhibitions are currently going on at The Art Institute of Chicago!
 
 ## Installation
 
 Add this line to your application's Gemfile:
+
+source "https://rubygems.org"
 
 ```ruby
 gem 'aic_exhibitions'
@@ -12,7 +14,7 @@ gem 'aic_exhibitions'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -21,6 +23,10 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
+    cd aic_exhibitions
+    
+    ./bin/current_exhibitions
 
 ## Development
 
