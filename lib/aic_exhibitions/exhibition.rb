@@ -1,5 +1,6 @@
 class AicExhibitions::Exhibition
   attr_accessor :name, :link
+  attr_reader :description
   
   @@all = []
   
@@ -16,5 +17,9 @@ class AicExhibitions::Exhibition
   
   def save
     @@all << self
+  end
+  
+  def description=
+    
   end
 end
